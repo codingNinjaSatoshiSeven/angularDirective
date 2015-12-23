@@ -2,4 +2,9 @@ node_modules/
 app/bower_components/
 npm-debug.log
 .DS_Store
-dist
+*.log
+.DS_Store
+**.DS_Store
+**/.DS_Store
+dist/
+build/
