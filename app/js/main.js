@@ -3,30 +3,44 @@
   'use strict';
 
   require('angular');
-  require('angular-route');
+  require('angular-ui-router');
   require('angular-animate');
-  var mainCtrl = require('./controllers/mainctrl');
+  var clickTochangeCtrl = require('./controllers/clickTochange.ctlr.js');
+  var clickTochangeDir = require('./directives/clickTochange.dir.js');
 
-  angular.module('SampleApp', ['ngRoute', 'ngAnimate'])
+  angular.module('App', ['ngAnimate', 'ui.router'])
+
 
   .config([
-    '$locationProvider',
-    '$routeProvider',
-    function($locationProvider, $routeProvider) {
-      $locationProvider.hashPrefix('!');
-      // routes
-      $routeProvider
-        .when("/", {
-          templateUrl: "./partials/partial1.html",
-          controller: "MainController"
-        })
-        .otherwise({
-           redirectTo: '/'
-        });
+    '$stateProvider', 
+    '$urlRouterProvider', 
+    '$logProvider', 
+    function($stateProvider, $urlRouterProvider, $logProvider) {
+      $logProvider.debugEnabled(true);
+      $urlRouterProvider.otherwise('/home');
+
+      $stateProvider
+      .state("home", {
+          url: "/home"
+      })
+      .state("clickTochange", {
+          url: "/clickTochange",
+          templateUrl: "./partials/clickTochange.html",
+          controller: "ClickTochangeController"
+      });
     }
   ])
+  .run( function($rootScope,$state, $location) {
+
+    $rootScope.$on('$stateChangeError', function () {
+       // Redirect user to our home page
+      
+      $state.go('home');
+    });
+  })
 
   //Load controller
-  .controller('MainController', ['$scope', mainCtrl]);
+  .controller('ClickTochangeController', ['$scope', clickTochangeCtrl])
+  .directive('clickTochange', [clickTochangeDir]);
 
 }());
