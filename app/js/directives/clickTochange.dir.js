@@ -2,7 +2,7 @@ module.exports = function(){
 	return {
 	    restrict: 'AE',
 	    replace: true,
-	    template: '<p style="background-color:{{color}}; width: 50px; height: 50px"></p>',
+	    template: '<p style="background-color:{{color}}; width: 50px; height: 50px">',
 	    link: function(scope, elem, attrs) {
 	      elem.bind('click', function() {
 	        
@@ -11,10 +11,6 @@ module.exports = function(){
 	            console.log('index is ', index);
 	            scope.color = scope.colors[index];
 	        });
-	      });
-	      elem.bind('mouseover', function() {
-	        elem.css('cursor', 'grab');
-	        
 	      });
 	    }
 	};
