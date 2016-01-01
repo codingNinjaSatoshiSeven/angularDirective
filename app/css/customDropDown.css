@@ -1,6 +1,4 @@
 /* css */
-/* css */
-
 body {
   font-family: Arial;
   font-size: 14px;
@@ -27,16 +25,16 @@ span > b {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
 }
-custom-drop-down {
+dropdown {
   float: left;
   display: block;
   width: 250px;
 }
-custom-drop-down > div {
+dropdown > div {
   float: left;
   width: 100%;
 }
-custom-drop-down > div > div.dropdown-display {
+dropdown > div > div.dropdown-display {
   float: left;
   width: 100%;
   background: white;
@@ -46,7 +44,7 @@ custom-drop-down > div > div.dropdown-display {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
 }
-custom-drop-down > div > div.dropdown-display > * {
+dropdown > div > div.dropdown-display > * {
   float: left;
   height: 100%;
   height: 40px;
@@ -54,7 +52,7 @@ custom-drop-down > div > div.dropdown-display > * {
   display: inline-block;
   vertical-align: middle;
 }
-custom-drop-down > div > div.dropdown-display > span {
+dropdown > div > div.dropdown-display > span {
   font-size: 14px;
   width: 100%;
   position: relative;
@@ -63,10 +61,10 @@ custom-drop-down > div > div.dropdown-display > span {
   padding-right: 34px;
   padding-left: 10px;
 }
-custom-drop-down > div > div.dropdown-display > span.placeholder {
+dropdown > div > div.dropdown-display > span.placeholder {
   color: #AAA;
 }
-custom-drop-down > div > div.dropdown-display > i {
+dropdown > div > div.dropdown-display > i {
   position: relative;
   width: 14px;
   margin-left: -24px;
@@ -75,7 +73,7 @@ custom-drop-down > div > div.dropdown-display > i {
   padding-right: 10px;
   text-align: right;
 }
-custom-drop-down > div > div.dropdown-list {
+dropdown > div > div.dropdown-list {
   float: left;
   position: relative;
   width: 100%;
@@ -95,14 +93,14 @@ custom-drop-down > div > div.dropdown-list {
   -o-transition: transform ease 250ms;
   transition: transform ease 250ms;
 }
-custom-drop-down > div > div.dropdown-list > div {
+dropdown > div > div.dropdown-list > div {
   position: absolute;
   width: 100%;
   z-index: 2;
   cursor: pointer;
   background: white;
 }
-custom-drop-down > div > div.dropdown-list > div > div {
+dropdown > div > div.dropdown-list > div > div {
   float: left;
   width: 100%;
   padding: 0 10px;
@@ -112,20 +110,20 @@ custom-drop-down > div > div.dropdown-list > div > div {
   border: solid 1px #DDD;
   border-top: none;
 }
-custom-drop-down > div > div.dropdown-list > div > div:hover {
+dropdown > div > div.dropdown-list > div > div:hover {
   background: #F0F0F0;
 }
-custom-drop-down > div > div.dropdown-list > div > div.selected {
+dropdown > div > div.dropdown-list > div > div.selected {
   background: #2875C7;
   color: white;
 }
-custom-drop-down > div > div.dropdown-list > div > div > * {
+dropdown > div > div.dropdown-list > div > div > * {
   height: 40px;
   line-height: 40px !important;
   display: inline-block;
   vertical-align: middle;
 }
-custom-drop-down > div > div.dropdown-list > div > div > span {
+dropdown > div > div.dropdown-list > div > div > span {
   float: left;
   width: 100%;
   position: relative;
@@ -134,51 +132,19 @@ custom-drop-down > div > div.dropdown-list > div > div > span {
   -moz-box-sizing: border-box;
   color: inherit;
 }
-custom-drop-down > div > div.dropdown-list > div > div > i {
+dropdown > div > div.dropdown-list > div > div > i {
   float: left;
   width: 20px;
   margin-left: -20px;
   display: none;
 }
-custom-drop-down > div > div.dropdown-list > div > div.selected > i {
+dropdown > div > div.dropdown-list > div > div.selected > i {
   display: inline-block;
 }
-custom-drop-down > div.show > div.dropdown-list {
+dropdown > div.show > div.dropdown-list {
   transform: scale(1, 1);
   -ms-transform: scale(1, 1);
   -webkit-transform: scale(1, 1);
   -o-transform: scale(1, 1);
   -moz-transform: scale(1, 1);
-}
-
-/* stopWatch */
-.stopWatch {
-  padding: 5px;
-  background: linear-gradient(top, #222, #eee);
-  border: 7px solid #efefef;
-  border-radius: 5px;
-    display: inline-block;
-    margin: 10px auto;
-  
-  box-shadow: 
-    inset 0 -2px 10px 1px rgba(0, 0, 0, 0.75), 
-    0 5px 20px -10px rgba(0, 0, 0, 1);
-}
-.numbers {
-    font-size: 30px;
-  line-height: 40px;
-  font-family: digital, arial, verdana;
-  color: black;
-}
-
-@font-face {
-  font-family: 'digital';
-  src: url('http://thecodeplayer.com/uploads/fonts/DS-DIGI.TTF');
-  
-}
-
-.container {
-  padding: 5px;
-  text-align: center;
-
 }

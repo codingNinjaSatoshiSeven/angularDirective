@@ -1,0 +1,10 @@
+<p>Magic Suggest</p>
+<div>
+	<input id="fruit" basic-input-filter data="data" filtered-data="filteredData" filter="myInput" ng-model="myInput" list="fruit-selection"/>
+		<datalist id="fruit-selection">
+		<!--
+		  <option  value="{{datum}}" ng-repeat="datum in filteredData"></option>
+		  -->
+		  <select style="" id="_select" name="_select"  ng-model="d" ng-options='k as v  for (k,v) in filteredData'></select>
+		</datalist>
+</div>
